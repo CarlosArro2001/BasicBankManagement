@@ -1,8 +1,7 @@
 import sys
 
-#
 
-
+#main storage class is used to store all the data in as well as allowing the accessAcc class (below) to access this class
 class mainStorage():
     accHolderNames = ["Carlos", "Rick", "Morty"]
     pinNumbers = [2835, 1293, 5041]
@@ -58,8 +57,7 @@ class accessAcc(mainStorage):  # Applying Single inheritence
             print("Entering Balance : ", self.enteringAMT[i])
             i += 1
         MainMenu()
-    # Function that allows the user to edit the details of the account
-
+# Function that allows the user to edit the details of the account
     def editAccount(self):
         print("Enter the following numbers to edit the following details")
         print("1 - Name")
@@ -123,7 +121,8 @@ class accessAcc(mainStorage):  # Applying Single inheritence
                 print("Your Pin is incorrect ,returning to main menu")
                 break
         MainMenu()
-
+        
+#balance function allows the user to check the balance it works the same way as the withdraw and deposit function
         def balance(self):
             i = 0
             while self.pinStatus != True:
